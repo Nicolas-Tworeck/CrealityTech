@@ -1,0 +1,39 @@
+@media(max-width:1050px){
+    .navbar{
+        .nav-container{
+            .button-container{
+                .button{
+                    a{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:750px){
+    .navbar{
+        padding: 10px 0;
+        .nav-container{
+            .button-container{
+                display: none;
+            }
+            .hamburger{
+                display: flex;
+            }
+        }
+    }
+}
+@media(max-width:450px){
+    .navbar{
+        padding: 10px 0;
+        .nav-container{
+            grid-template-columns: 50% 50%;
+            .nav-logo{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
