@@ -86,6 +86,9 @@
             }
         }
     }
+    .inicio .inicio-container .text-container-inicio .title-container-inicio{
+        font-size: 15px;
+    }
     .inicio .inicio-container .text-container-inicio .button-chamada-inicio a{
         font-size: 12px;
         padding: 5px;

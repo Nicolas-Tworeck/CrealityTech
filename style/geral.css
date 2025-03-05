@@ -3,10 +3,12 @@
 * {
     margin: 0;
     font-family: arial;
-
     a {
         cursor: pointer;
     }
+}
+body{
+    background: var(--very-light-blue);
 }
 
 .navbar {
@@ -126,7 +128,8 @@
     transform: translateX(0);
     pointer-events: auto;
     /* Permite interação quando o menu estiver aberto */
-    box-shadow: -10px 0 100px var(--preto);
+    box-shadow: -10px 0 100px var(--color-black);
+    z-index: 15;
 
 }
 
@@ -154,6 +157,12 @@
             .title-container-inicio {
                 width: 80%;
                 font-size: 20px;
+                .strong{
+                    color: var(--color-blue);
+                }
+                .market{
+                    color: var(--dark-blue);
+                }
             }
 
             .folder-container-inicio {
@@ -178,6 +187,7 @@
                     background: var(--color-blue);
                     color: var(--color-white);
                     transform: scale(1.1);
+                    box-shadow: 0 5px 20px var(--dark-blue);
                 }
 
                 #contato-inicio {
@@ -191,6 +201,7 @@
                     background: var(--color-green);
                     color: var(--color-white);
                     transform: scale(1.1);
+                    box-shadow: 0 5px 20px var(--color-green);
                 }
 
                 a {
@@ -202,6 +213,7 @@
                         margin: 0 5px 0 0;
                     }
                 }
+                
             }
 
         }
