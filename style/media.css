@@ -1,3 +1,4 @@
+
 @media(max-width:1050px){
     .navbar{
         .nav-container{
@@ -7,6 +8,43 @@
                         font-size: 10px;
                     }
                 }
+            }
+        }
+    }
+}
+@media(max-width:930px){
+    .inicio{
+        .inicio-container{
+            display: flex;
+            flex-direction: column;
+            .text-container-inicio{
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .title-container-inicio{
+                    width: 80%;
+                    font-size: 18px;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .folder-container-inicio{
+                    width: 80%;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .button-chamada-inicio{
+                    width: 80%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            .img-container-inicio{
+                margin: 10% 5% 0 5%;
+                display: flex;
+                justify-content: center;
             }
         }
     }
@@ -23,6 +61,18 @@
             }
         }
     }
+    .inicio .inicio-container .text-container-inicio .button-chamada-inicio{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        a{
+            text-align: center;
+            
+        }
+        #contato-inicio, #conhecer-inicio{
+            margin: 5px 0;
+        }
+    }
 }
 @media(max-width:450px){
     .navbar{
@@ -35,5 +85,12 @@
                 }
             }
         }
+    }
+    .inicio .inicio-container .text-container-inicio .button-chamada-inicio a{
+        font-size: 12px;
+        padding: 5px;
+    }
+    .inicio .inicio-container .img-container-inicio{
+            margin: 20% 5% 0 5%;
     }
 }
