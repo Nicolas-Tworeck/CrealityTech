@@ -4,6 +4,7 @@
     margin: 0;
     font-family: arial;
     scroll-behavior: smooth;
+
     a {
         cursor: pointer;
     }
@@ -12,6 +13,17 @@
 body {
     background: var(--very-light-blue);
 }
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+body::-webkit-scrollbar-track{
+    background: var(--dark-blue);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--very-light-blue);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--dark-blue);  /* creates padding around scroll thumb */
+  }
 
 .navbar {
     background: var(--color-blue);
@@ -19,6 +31,7 @@ body {
     justify-content: center;
     width: 100%;
     box-shadow: 0 5px 20px var(--color-black);
+
     .nav-container {
         width: 100%;
         display: grid;
@@ -293,6 +306,7 @@ body {
             animation: jump 1s ease-in-out infinite;
             opacity: 0;
             transition: opacity 1s ease;
+
             i {
                 color: var(--dark-blue);
                 font-size: 25px;
@@ -304,7 +318,7 @@ body {
             animation: none;
             transform: scale(1.1);
             background: var(--dark-blue);
-
+            box-shadow: 0 5px 20px var(--color-black);
             i {
                 color: var(--color-white);
             }
@@ -328,49 +342,58 @@ body {
     }
 }
 
+#filosofia {
+    scroll-margin-top: 50px;
+}
 
-.filosofia{
+.filosofia {
     margin-top: -1.5%;
-    .filosofia-container{
+
+    .filosofia-container {
         display: grid;
         grid-template-columns: 50% 50%;
-        /* Esconde os elementos inicialmente */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px); /* Desloca os elementos para baixo */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-/* Classe que será adicionada quando o elemento estiver visível */
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0); /* Retorna à posição original */
-}
-        .text-filo{
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-filo {
             background: var(--color-blue);
+
             box-shadow: 0 5px 20px var(--color-black);
             z-index: 1;
             padding: 20px;
-            border-radius: 0 20% 0 0;
+            border-radius: 0 20% 20% 0;
             display: flex;
             justify-content: start;
             flex-direction: column;
             opacity: 0;
             transition: opacity 1s ease;
-            .title-filo{
+            transition: 0.5s;
+            .title-filo {
                 width: 80%;
                 text-align: center;
                 border-bottom: 2px solid var(--dark-blue);
                 opacity: 0;
                 transition: opacity 1s ease;
-                h1{
+
+                h1 {
                     color: var(--color-white);
                 }
             }
-            .folder-filo{
+
+            .folder-filo {
                 margin-top: 30px;
+
                 width: 90%;
-                p{
+
+                p {
                     text-align: justify;
                     font-weight: 600;
                     margin-top: 5px;
@@ -378,59 +401,177 @@ body {
                 }
             }
         }
-        .graphic-filo{
+        .text-filo:hover{
+            box-shadow: 0 0 30px var(--dark-blue);
+        }
+        .graphic-filo {
+
             background: var(--dark-blue);
             box-shadow: 0 5px 20px var(--color-black);
             z-index: 1;
             padding: 20px;
-            border-radius: 20% 0 0 0;
+            border-radius: 20% 0 0 20%;
             display: flex;
             justify-content: center;
             opacity: 0;
             transition: opacity 1s ease;
-            .img-filo{
+            transition: 0.5s;
+            .img-filo {
                 display: flex;
                 justify-content: center;
-                img{
+
+                img {
                     width: 100%;
                 }
             }
         }
+        .graphic-filo:hover{
+            box-shadow: 0 0 30px var(--dark-blue);
+        }
     }
 }
+
 .up {
     position: fixed;
-    bottom: 20px; /* Distância do fundo */
-    right: 20px; /* Distância da direita */
-    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+    bottom: 20px;
+    /* Distância do fundo */
+    right: 20px;
+    /* Distância da direita */
+    z-index: 1000;
+    /* Para garantir que fique acima de outros elementos */
     transition: opacity 0.3s ease;
     opacity: 0;
 }
+
 .up.visible {
     opacity: 1;
 }
+
 .up-container {
-    background-color: var(--dark-blue); /* Cor de fundo */
-    border-radius: 50%; /* Para deixar o botão redondo */
-    width: 50px; /* Largura */
-    height: 50px; /* Altura */
+    background-color: var(--dark-blue);
+    /* Cor de fundo */
+    border-radius: 50%;
+    /* Para deixar o botão redondo */
+    width: 50px;
+    /* Largura */
+    height: 50px;
+    /* Altura */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px var(--color-black); /* Sombra */
+    box-shadow: 0 4px 8px var(--color-black);
+    /* Sombra */
     transition: 0.5s;
     cursor: pointer;
 }
-.up-container:hover{
+
+.up-container:hover {
     background: var(--color-blue);
 }
 
 .up-container a {
-    color: var(--very-light-blue); /* Cor do ícone */
-    text-decoration: none; /* Remover sublinhado */
-    font-size: 24px; /* Tamanho do ícone */
+    color: var(--very-light-blue);
+    /* Cor do ícone */
+    text-decoration: none;
+    /* Remover sublinhado */
+    font-size: 24px;
+    /* Tamanho do ícone */
 }
 
 .up-container a:hover {
-    color: var(--very-light-blue); /* Cor do ícone ao passar o mouse */
+    color: var(--very-light-blue);
+    /* Cor do ícone ao passar o mouse */
+}
+
+.processo-criativo {
+    margin: 10% 0 0 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+
+    .container-criativo {
+        padding: 5px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-content: center;
+        #number1, #number2, #number3 {
+            opacity: 0; 
+            transition: opacity 1s ease;
+        }
+        
+        #number1.visible, #number2.visible, #number3.visible {
+            opacity: 1; 
+        }
+        #number1 {
+            justify-content: end;
+        }
+
+        #number3 {
+            justify-content: start;
+        }
+
+        .container-processo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            #number2 {
+                width: 100%;
+                background: var(--dark-blue);
+                height: 120%;
+                margin-top: -10%;
+                z-index: 20;
+                transition: 0.5s;
+                .text-processo {
+                    strong {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .container-number {
+                background: var(--color-blue);
+                padding: 5px;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 5%;
+                z-index: 10;
+                box-shadow: 0 5px 20px var(--color-black);
+                transition: 0.5s;
+                .text-processo {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 95%;
+
+                    h1 {
+                        color: var(--very-light-blue);
+                        text-decoration: underline 2px solid var(--color-blue);
+                    }
+
+                    strong {
+                        margin: 5% 0 0 0;
+                        color: var(--very-light-blue);
+                    }
+
+                    p {
+                        margin: 5% 0;
+                        text-align: justify;
+                        color: var(--color-gray);
+                    }
+                }
+            }
+            .container-number:hover{
+                box-shadow: 0 0 30px var(--dark-blue);
+            }
+        }
+    }
 }

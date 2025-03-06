@@ -42,7 +42,7 @@ window.onload = showImagesInSequence;
 
 
 
-
+//aparece quando aparece na tela
 document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll('.fade-in');
 
@@ -68,9 +68,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//animação criativo
+document.addEventListener("DOMContentLoaded", function(){
+    const elements = document.querySelectorAll('#number1, #number2, #number3');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                if(entry.target.id === 'number1'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },300);
+                }else if(entry.target.id === 'number2'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },800);
+                }else if(entry.target.id === 'number3'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },1300);
+                }
+            }
+        });
+    };
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
 
 
 
+
+
+
+//button return
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     const upButton = document.querySelector('.up');
