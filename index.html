@@ -16,17 +16,17 @@
 <body>
     <form>
 
-        <div class="navbar">
+        <div id="navbar" class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
                     <img src="img/folder.svg" alt="LOGO">
                 </div>
                 <div class="button-container">
-                    <div class="button"><a>CORPORATIVA</a></div>
-                    <div class="button"><a>NOSSA FILOSOFIA</a></div>
-                    <div class="button"><a>NOSSOS SERVIÇOS</a></div>
-                    <div class="button"><a>CLIENTES</a></div>
-                    <div class="button"><a>CONTATO</a></div>
+                    <div onclick="filosofia()" class="button"><a>FILOSOFIA</a></div>
+                    <div class="button"><a>BUTTON</a></div>
+                    <div class="button"><a>BUTTON</a></div>
+                    <div class="button"><a>BUTTON</a></div>
+                    <div class="button"><a>BUTTON</a></div>
                 </div>
                 <div class="hamburguer-container">
                     <div class="hamburger">
@@ -38,11 +38,12 @@
 
                 <div class="menu-mobile">
                     <div class="button-menu">
-                        <a onclick="inicio()">INÍCIO</a>
-                        <a onclick="empresa()">EMPRESA</a>
-                        <a onclick="vantagem()">VANTAGENS</a>
-                        <a onclick="projetos()">PROJETOS</a>
-                        <a>BUTTON</a>
+                        <div onclick="filosofia()" class="button"><a>FILOSOFIA</a></div>
+                        <div class="button"><a>BUTTON</a></div>
+                        <div class="button"><a>BUTTON</a></div>
+                        <div class="button"><a>BUTTON</a></div>
+                        <div class="button"><a>BUTTON</a></div>
+                        
                     </div>
 
                 </div>
@@ -50,7 +51,7 @@
         </div>
         <div class="inicio">
             <div class="inicio-container">
-                <div class="text-container-inicio">
+                <div id="text-container-inicio" class="text-container-inicio">
                     <div class="title-container-inicio">
                         <h1>
                             <div class="strong">Creality Tech</div>Revolucionando o <div class="market">Mercado Digital
@@ -79,10 +80,52 @@
                 </div>
             </div>
         </div>
+        <div class="button-more">
+            <div class="button-more-container">
+                <a onclick="filosofia()" id="button-down-more"><i class="bi bi-chevron-double-down"></i></a>
+            </div>
+        </div>
 
+        <div id="filosofia" class="filosofia">
+            <div class="filosofia-container">
+                <div id="text-filo" class="text-filo">
+                    <div id="title-filo" class="title-filo">
+                        <h1>IMPULSIONANDO SEU NEGÓCIO</h1>
+                    </div>
+                    <div class="folder-filo">
+                        <p class="fade-in">A Creality Tech Solutions tem como missão impulsionar o crescimento e a
+                            eficiência da sua
+                            empresa por meio de soluções tecnológicas inovadoras e personalizadas. Nosso objetivo é
+                            fornecer ferramentas que otimizem processos, aumentem a produtividade e garantam um
+                            desempenho superior em todos os setores do seu negócio. Com sistemas avançados e suporte
+                            especializado, ajudamos sua empresa a se adaptar às demandas do mercado, tornando-a mais
+                            competitiva e preparada para os desafios futuros.</p>
+                        <p class="fade-in">Ao escolher a Creality Tech Solutions, você investe em uma parceria que vai
+                            além da
+                            tecnologia, focada em resultados tangíveis e no sucesso duradouro do seu negócio. Nossas
+                            soluções são projetadas para transformar operações complexas em processos simplificados,
+                            permitindo que sua empresa prospere de maneira consistente e sustentável. Com a Creality,
+                            você não apenas melhora o desempenho atual, mas também abre portas para novas oportunidades,
+                            garantindo um futuro promissor e cheio de possibilidades.</p>
+                    </div>
+                </div>
+                <div id="img-filo" class="graphic-filo">
+                    <div class="img-filo">
+                        <img class="fade-in" src="img/graphic.svg" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="up">
+            <div onclick="nav()" class="up-container">
+                <a onclick="nav()" ><i class="bi bi-chevron-double-up"></i></a>
+            </div>
+        </div>
     </form>
 </body>
 <script src="script/menu.js"></script>
 <script src="script/animation.js"></script>
+<script src="script/href.js"></script>
 
 </html>

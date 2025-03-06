@@ -1,10 +1,9 @@
-
-@media(max-width:1050px){
-    .navbar{
-        .nav-container{
-            .button-container{
-                .button{
-                    a{
+@media(max-width:1050px) {
+    .navbar {
+        .nav-container {
+            .button-container {
+                .button {
+                    a {
                         font-size: 10px;
                     }
                 }
@@ -12,88 +11,189 @@
         }
     }
 }
-@media(max-width:930px){
-    .inicio{
-        .inicio-container{
+
+@media(max-width:930px) {
+    .inicio {
+        .inicio-container {
             display: flex;
             flex-direction: column;
-            .text-container-inicio{
+
+            .text-container-inicio {
                 margin: 0;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                .title-container-inicio{
+
+                .title-container-inicio {
                     width: 80%;
                     font-size: 18px;
                     display: flex;
                     justify-content: center;
                     text-align: center;
                 }
-                .folder-container-inicio{
+
+                .folder-container-inicio {
                     width: 80%;
                     display: flex;
                     justify-content: center;
                     text-align: center;
                 }
-                .button-chamada-inicio{
+
+                .button-chamada-inicio {
                     width: 80%;
                     display: flex;
                     justify-content: center;
                 }
             }
-            .img-container-inicio{
-                margin: 10% 5% 0 5%;
+
+            .img-container-inicio {
+                margin: 10% 5% 5px 5%;
                 display: flex;
+                align-items: center;
                 justify-content: center;
+                .img-transition {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    #img1 {
+                        width: 40%;
+                        left: 0;
+                        top: -40px;
+                        filter: blur(1px);
+                    }
+
+                    #img2 {
+                        width: 45%;
+                    }
+
+                    #img3 {
+                        width: 40%;
+                        right: 0;
+                        top: -40px;
+                        filter: blur(1px);
+                    }
+                }
+            }
+        }
+    }
+    .button-more{
+        .button-more-container{
+            margin-top: 5%;
+        }
+    }
+    .filosofia{
+        margin-top: 5%;
+        .filosofia-container{
+            display: flex;
+            flex-direction: column;
+            .text-filo{
+                border-radius: 20% 20% 0 0 ;
+                align-items: center;
+                .title-filo{
+
+                }
+            }
+            .graphic-filo{
+                border-radius: 0;
+                box-shadow: none;
+                .img-filo{
+                    background:var(--color-blue) ;
+                    border-radius: 20px;
+                    img{
+                        width: 80%;
+                    }
+                }
             }
         }
     }
 }
-@media(max-width:750px){
-    .navbar{
+
+@media(max-width:750px) {
+    .navbar {
         padding: 10px 0;
-        .nav-container{
-            .button-container{
+        .nav-container {
+            .button-container {
                 display: none;
             }
-            .hamburger{
+
+            .hamburger {
                 display: flex;
+            }
+            .menu-mobile{
+                .button-menu{
+                    .button{
+                        margin-top: 10px;
+                    }
+                }
             }
         }
     }
-    .inicio .inicio-container .text-container-inicio .button-chamada-inicio{
+
+    .inicio .inicio-container .text-container-inicio .button-chamada-inicio {
         display: flex;
         flex-direction: column;
         width: 45%;
-        a{
+
+        a {
             text-align: center;
-            
+
         }
-        #contato-inicio, #conhecer-inicio{
+
+        #contato-inicio,
+        #conhecer-inicio {
             margin: 5px 0;
         }
     }
+
 }
-@media(max-width:450px){
-    .navbar{
+
+@media(max-width:450px) {
+    .navbar {
         padding: 10px 0;
-        .nav-container{
+
+        .nav-container {
             grid-template-columns: 50% 50%;
-            .nav-logo{
-                img{
+
+            .nav-logo {
+                img {
                     width: 100%;
                 }
             }
         }
     }
-    .inicio .inicio-container .text-container-inicio .title-container-inicio{
+
+    .inicio .inicio-container .text-container-inicio .title-container-inicio {
         font-size: 15px;
     }
-    .inicio .inicio-container .text-container-inicio .button-chamada-inicio a{
+
+    .inicio .inicio-container .text-container-inicio .button-chamada-inicio a {
         font-size: 12px;
         padding: 5px;
     }
-    .inicio .inicio-container .img-container-inicio{
-            margin: 20% 5% 0 5%;
+
+    .inicio .inicio-container .img-container-inicio {
+        margin: 20% 5% 0 5%;
+    }
+    .button-more{
+        .button-more-container{
+            margin-top: 25%;
+        }
+    }
+    .filosofia{
+        .filosofia-container{
+            .text-filo{
+                border-radius: 1% 1% 0 0;
+                padding: 0;
+                h1{
+                    margin-top: 20px;
+                }
+                p{
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 }
