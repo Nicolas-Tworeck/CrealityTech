@@ -68,6 +68,69 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//animação slide
+document.addEventListener("DOMContentLoaded", function(){
+    const elements = document.querySelectorAll('#container-slide');
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.9
+    };
+    const observerCallback = (entries, observe) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                observe.unobserve(entry.target);
+            }
+        });
+    };
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+//animação serviços
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('#servico1, #servico2, #servico3, #servico4, #servico5');
+    const observerOptions = {
+        root:null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    const observerCallback = (entries, observe) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                if(entry.target.id === 'servico1'){
+                    setTimeout(() =>{
+                        entry.target.classList.add('visible');
+                    },300);
+                }else if(entry.target.id === 'servico2'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },600);
+                }else if(entry.target.id === 'servico3'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },900);
+                }else if(entry.target.id === 'servico4'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },1200);
+                }else if(entry.target.id === 'servico5'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },1500);
+                }
+            }
+        });
+    };
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    elements.forEach(element =>{
+        observer.observe(element);
+    });
+});
+
 //animação criativo
 document.addEventListener("DOMContentLoaded", function(){
     const elements = document.querySelectorAll('#number1, #number2, #number3');
@@ -107,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-//button return
+//button return nav
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     const upButton = document.querySelector('.up');

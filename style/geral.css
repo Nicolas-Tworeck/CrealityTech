@@ -601,15 +601,24 @@ body::-webkit-scrollbar-thumb {
         }
     }
 }
-
-
-
-
+#container-slide{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+#container-slide.visible{
+    opacity: 1;
+}
+.container-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5% 0 0 0;
+}
 
 .slider {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 70%;
 }
 
 .slides {
@@ -622,13 +631,24 @@ body::-webkit-scrollbar-thumb {
     box-sizing: border-box;
     text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+
 .slider img {
-    width: 50%;
+    width: 90%;
     /* Garante que a imagem ocupe toda a largura do slide */
     display: block;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px var(--color-black);
+    margin: 50px 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.slider img:hover {
+    transform: scale(1.05);
 }
 
 .controls {
@@ -642,9 +662,128 @@ body::-webkit-scrollbar-thumb {
 
 .prev,
 .next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--white-color);
+    color: var(--dark-blue);
     padding: 10px;
     cursor: pointer;
     font-size: 20px;
+    transition: 0.5s;
+}
+
+.prev:hover,
+.next:hover {
+    transform: scale(1.5);
+}
+
+.servicos {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    #title-container-servico{
+        margin: 50px 20px 0;
+    }
+    .container-servicos {
+        width: 90%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        #servico1,
+        #servico2,
+        #servico3,
+        #servico4,
+        #servico5{
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        #servico1.visible,
+        #servico2.visible,
+        #servico3.visible,
+        #servico4.visible,
+        #servico5.visible{
+            opacity: 1;
+        }
+        .servico-content {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 2px;
+            margin: 10px 0 30px 0;
+            transition: 0.5s;
+            border: transparent;
+
+            .title-content-servico {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                border-bottom: 2px solid var(--color-blue);
+                h1{
+                    font-size: 25px;
+                }
+            }
+
+            .icon-content-servico {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 10px 0;
+                text-align: center;
+                i {
+                    font-size: 40px;
+                    margin: 0 5px 0 5px;
+                }
+
+                h2 {
+                    margin: 7px 0 7px 0;
+                }
+            }
+
+            .text-content-servico {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                text-align: justify;
+                margin: 0 0 10px 0;
+
+                label {
+                    font-size: 20px;
+                }
+            }
+
+            .button-content-servico {
+                margin: 10px 0 10px 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                a {
+                    background: transparent;
+                    padding: 5px;
+                    color: transparent;
+                    border-radius: 5px;
+                    transition: 0.3s;
+                    border: 2px solid;
+                }
+                
+            }
+        }
+
+        .servico-content:hover {
+            border: 1px solid var(--dark-blue);
+            border-radius: 5px;
+
+            .button-content-servico {
+                a {
+                    border: 2px solid var(--color-blue);
+                    color: var(--dark-blue);
+                }
+                a:hover {
+                    transform: scale(1.1);
+                    background: var(--color-blue);
+                    color: var(--very-light-blue);
+                    box-shadow: 0 5px 20px var(--color-black);
+                }
+                
+            }
+        }
+    }
 }

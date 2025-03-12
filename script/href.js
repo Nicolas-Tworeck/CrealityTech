@@ -4,8 +4,8 @@ function filosofia(){
 function processo(){
     window.location.href = "#processo";
 }
-function planos(){
-    window.location.href = "#planos";
+function servicos(){
+    window.location.href = "#container-slide";
 }
 function nav(){
     window.location.href = "#navbar";
