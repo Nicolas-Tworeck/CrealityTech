@@ -210,6 +210,12 @@
             }
         }
     }
+    .contato{
+        .container-contato{
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 @media(max-width:860px) {
@@ -282,6 +288,16 @@
                     }
                 }
                
+            }
+        }
+    }
+    .contato{
+        .container-contato{
+            .text-contato{
+                .paragrafo-contato{
+                    width: 90%;
+                   
+                }
             }
         }
     }

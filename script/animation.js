@@ -131,6 +131,39 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+//contato animação
+document.addEventListener("DOMContentLoaded", function(){
+    const elements = document.querySelectorAll('#contato, #text-contato, #contato-link');
+    const observerOptions ={
+        root:null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                if(entry.target.id === 'contato'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },200);
+                }else if(entry.target.id === 'text-contato'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },500);
+                }else if(entry.target.id === 'contato-link'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },800);
+                }
+            }
+        });
+    };
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    elements.forEach(elements => {
+        observer.observe(elements);
+    });
+});
+
 //animação criativo
 document.addEventListener("DOMContentLoaded", function(){
     const elements = document.querySelectorAll('#number1, #number2, #number3');
