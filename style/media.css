@@ -358,4 +358,38 @@
     .slider {
         width: 95%;
     }
+    .contato{
+        .container-contato{
+            .text-contato{
+                .title-contato{
+                    h1{
+                        font-size: 25px;
+                    }
+                }
+                .paragrafo-contato{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+            .links-contato{
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    footer{
+        .container-footer{
+            img{
+                width: 40%;
+            }
+        }
+    }
+    .header-footer{
+        label{
+            font-size: 10px;
+        }
+    }
+
 }

@@ -126,39 +126,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
-
-
-
-
-
-
-
-
-
-
-// Adicione isso no seu arquivo JavaScript (script/href.js ou um novo arquivo)
-document.addEventListener('scroll', function () {
-    var someProductsSection = document.getElementById('some-products');
-
-    var position = someProductsSection.getBoundingClientRect();
-
-    // Verifica se o conteúdo está quase visível na tela
-    if (position.top < window.innerHeight - 100) {
-        someProductsSection.classList.add('show');
-    }
-});
-
-// Adicione isso no seu arquivo JavaScript (script/href.js ou um novo arquivo)
-
-document.addEventListener('scroll', function () {
-    var rodapeContent = document.querySelectorAll('.rodape-content');
-
-    rodapeContent.forEach(function (item) {
-        var position = item.getBoundingClientRect();
-
-        // Verifica se o item está quase visível na tela (200px antes de chegar ao final)
-        if (position.top < window.innerHeight - 50) {
-            item.classList.add('show');
-        }
-    });
-});

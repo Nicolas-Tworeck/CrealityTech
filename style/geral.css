@@ -803,6 +803,9 @@ body::-webkit-scrollbar-thumb {
         }
     }
 }
+.servico-cell{
+    display: none;
+}
 #contato,
 #text-contato,
 #contato-link{
@@ -816,10 +819,16 @@ body::-webkit-scrollbar-thumb {
 }
 .contato{
     background: var(--dark-blue);
+   
+    box-shadow: 0 5px 20px var(--color-black);
+    display: flex;
+    justify-content: center;
     .container-contato{
         display: grid;
         grid-template-columns: 50% 50%;
         align-items: center;
+        border-bottom: 2px solid var(--color-blue);
+        width: 98%;
         .text-contato{
             margin: 10px;
             display: flex;
@@ -827,6 +836,7 @@ body::-webkit-scrollbar-thumb {
             align-items: center;
             background: var(--color-blue);
             border-radius: 5px;
+            box-shadow: 0 5px 20px var(--color-black);
             .title-contato{
                 width: 70%;
                 margin: 10px 0;
@@ -864,6 +874,7 @@ body::-webkit-scrollbar-thumb {
             }
             a:hover{
                 transform: scale(1.1);
+                text-shadow: 0 5px 20px var(--color-black);
                 #whats{
                     color: var(--color-green);
                 }
@@ -876,4 +887,22 @@ body::-webkit-scrollbar-thumb {
             }
         }
     }
+}
+footer{
+    .container-footer{
+        background: var(--dark-blue);
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 20%;
+        }
+    }
+}
+.header-footer{
+    display: flex;
+    justify-content: center;
+    background: var(--dark-blue);
+    color: var(--very-light-blue);
+    padding: 5px 0;
 }
