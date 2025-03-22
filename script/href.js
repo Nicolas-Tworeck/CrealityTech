@@ -10,3 +10,6 @@ function servicos(){
 function nav(){
     window.location.href = "#navbar";
 }
+function siteMold(){
+    window.location.href = "https://nicolas-tworeck.github.io/MoldMetais/";
+}
