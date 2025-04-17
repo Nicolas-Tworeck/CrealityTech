@@ -45,6 +45,7 @@
 }
 
 @media(max-width:930px) {
+    
     .inicio {
         .inicio-container {
             display: flex;
@@ -216,6 +217,7 @@
             flex-direction: column;
         }
     }
+    
 }
 
 @media(max-width:860px) {

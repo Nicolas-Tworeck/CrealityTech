@@ -538,7 +538,6 @@ body::-webkit-scrollbar-thumb {
             width: 100%;
             display: flex;
             justify-content: center;
-
             #number2 {
                 width: 100%;
                 background: var(--dark-blue);
@@ -616,6 +615,8 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     margin: 5% 0 0 0;
+    background: var(--dark-blue);
+    box-shadow: 0 5px 20px var(--dark-blue);
 }
 
 .slider {
@@ -647,12 +648,9 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0 5px 20px var(--color-black);
     margin: 50px 0;
     transition: 0.5s;
-    cursor: pointer;
 }
 
-.slider img:hover {
-    transform: scale(1.05);
-}
+
 
 .controls {
     position: absolute;
@@ -665,7 +663,7 @@ body::-webkit-scrollbar-thumb {
 
 .prev,
 .next {
-    color: var(--dark-blue);
+    color: var(--color-white);
     padding: 10px;
     cursor: pointer;
     font-size: 20px;

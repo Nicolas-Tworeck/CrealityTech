@@ -67,6 +67,38 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 });
+//animação localidade
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('#maps, #svg-map, #text');
+    const observerOptions = {
+        root:null,
+        rootMargin: '0px',
+        threshold: 0.3
+    };
+    const observerCallback = (entries, observe) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                if(entry.target.id === 'maps'){
+                    setTimeout(() =>{
+                        entry.target.classList.add('visible');
+                    },300);
+                }else if(entry.target.id === 'svg-map'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },600);
+                }else if(entry.target.id === 'text'){
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    },900);
+                }
+            }
+        });
+    };
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    elements.forEach(element =>{
+        observer.observe(element);
+    });
+});
 
 //animação slide
 document.addEventListener("DOMContentLoaded", function(){
